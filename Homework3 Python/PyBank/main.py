@@ -55,9 +55,9 @@ outputText.append("\n \n \nSource file: " + filePath)
 
 
 # print 
-outputName = input('Please name analysis file: \n')
-fileOutput = outputName + '.txt'
-with open(fileOutput,'w') as fileOut:
+output_name = input('Please name analysis file: aaa')
+file_output = output_name + '.txt'
+with open(file_output,'w') as fileOut:
     for line in outputText:
         print(line)
         fileOut.write(line + '\n')
