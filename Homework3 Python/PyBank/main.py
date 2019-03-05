@@ -22,7 +22,7 @@ def average(avg):
     return (total/len(avg))
 
 # Open and read csv
-with open(filePath, newline="") as fileData:
+with open(filePath, "r", newline='') as fileData:
     csvreader = csv.reader(fileData, delimiter=",")
     next(csvreader,'None')
     for row in csvreader:
@@ -47,10 +47,10 @@ outputText = []
 outputText.append("Financial Analysis")
 outputText.append("---------------------------------")
 outputText.append("Total Months: " + str(number_months))
-outputText.append("Total Revenue: $" + str(total_amount//number_months))
-outputText.append("Average Revenue Change: $" + str(round(average(differences),2)))
-outputText.append("Greatest Increase in Revenue: " + greatest_increase_month + " ($" + str(greatest_increase_amount) + ")") 
-outputText.append("Greatest Decrease in Revenue: " + greatest_decrease_month + " ($" + str(greatest_decrease_amount) + ")")
+outputText.append("Total: $" + str(total_amount//number_months))
+outputText.append("Average Change: $" + str(round(average(differences),2)))
+outputText.append("Greatest Increase in Profits: " + greatest_increase_month + " ($" + str(greatest_increase_amount) + ")") 
+outputText.append("Greatest Decrease in Profits: " + greatest_decrease_month + " ($" + str(greatest_decrease_amount) + ")")
 outputText.append("\n \n \nSource file: " + filePath)
 
 
