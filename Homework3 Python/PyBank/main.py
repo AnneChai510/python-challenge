@@ -2,7 +2,7 @@ import os
 import csv
 
 sourceDir = 'CSV_data'
-sourceFile = 'budget_data.csv'
+sourceFile = 'CSV_data/budget_data.csv'
 filePath = os.path.join(sourceDir,sourceFile)
 
 number_months = 0 
@@ -50,7 +50,7 @@ outputText.append("Total Months: " + str(number_months))
 outputText.append("Total Revenue: $" + str(total_amount//number_months))
 outputText.append("Average Revenue Change: $" + str(round(average(differences),2)))
 outputText.append("Greatest Increase in Revenue: " + greatest_increase_month + " ($" + str(greatest_increase_amount) + ")") 
-outputText.append("Greatest Decrease in Revenue: " + loMonth + " ($" + str(loRevenue) + ")")
+outputText.append("Greatest Decrease in Revenue: " + greatest_decrease_month + " ($" + str(greatest_decrease_amount) + ")")
 outputText.append("\n \n \nSource file: " + filePath)
 
 
